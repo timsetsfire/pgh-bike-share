@@ -96,7 +96,7 @@ object DataPrep extends App {
 
   val adjacencySet = scala.collection.mutable.Map[(Int,Int),Int]()
 
-  val out = new PrintWriter("../data/processed/edges-trips.csv")
+  val out = new PrintWriter("../data/processed/edges.csv")
   out.write(":START_ID(Station),tripId,bikeId,startTime,stopTime,:END_ID(Station)\n")
   edges.foreach{
     edge =>
@@ -110,23 +110,6 @@ object DataPrep extends App {
       }
   }
   out.close
-  val outAdj = new PrintWriter("../data/processed/edges-markov.csv")
-  // val outDegree = new PrintWriter("../data/processed/degrees.csv")
-  outAdj.write(":START_ID(Station),:END_ID(Station),w:Int,d:Int\n")
-  //outDegree.write("vertex,degree\n")
-  adjacencySet.foreach {
-    adj =>
-    val ((start,end),w) = adj
-    val degree = degrees(start)
-  outAdj.write(s"$start,$end,$w,$degree\n")
-  }
-  outAdj.close
-  // degrees.foreach{
-  //   vertex =>
-  //   val (v, d) = vertex
-  //   outDegree.write(s"$v,$d\n")
-  // }
-  // outDegree.close
 
   val outVertices = new PrintWriter("../data/processed/vertices.csv")
   outVertices.write("stationId:ID(Station),stationName,numRacks:Int,latitude:Double,longitude:Double\n")
