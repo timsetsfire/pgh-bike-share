@@ -12,7 +12,7 @@ run `./GetData.sh` to download the last 9 quarters worth of data from (PGH Bike 
 
 run `./CleanData.sh` to prepare data for Neo4j.
 
-run `./neo4jLoad.sh` to create bikeGraph.db.
+run `./neo4jLoad.sh` to create bikeGraph.db.  You will most likely have to update this file to point at your Neo4j install.
 
 ### Note
 
