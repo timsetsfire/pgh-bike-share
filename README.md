@@ -4,11 +4,13 @@ Create a Neo4j graph database based on the Pittsburgh Bike Share data.
 
 ### Requirements
 
-Assumes you have installed Neo4j release 3.2.3 and Java 1.8.  Make sure environment variable NEO4J_HOME is set.
+Assumes you have installed Neo4j release 3.2.3 and Java 1.8.  Make sure environment variable NEO4J_HOME is set to where you install neo4j.
 
 ### Usage
 
-run `./GetData.sh` to download the last 9 quarters worth of data from (PGH Bike Share)[http://pghbikeshare.org].
+From bash or git bash
+
+run `./GetData.sh` to download the last 9 quarters worth of data from [PGH Bike Share](http://pghbikeshare.org).
 
 run `./CleanData.sh` to prepare data for Neo4j.
 
@@ -17,4 +19,4 @@ Once the process is complete drop bikegraph.db into $NEO4J_HOME/data/database an
 
 ### Note
 
-This process uses neo4j-import.  Please note that this has been deprecated and it is recommend to use neo4j-admin import.
+This process uses neo4j-import.  Please note that this has been deprecated. 
