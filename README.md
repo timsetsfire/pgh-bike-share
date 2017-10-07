@@ -16,4 +16,4 @@ run `./neo4jLoad.sh` to create bikeGraph.db.
 
 ### Note
 
-The main tool neo4j-import has been deprecated and it is recommend to use neo4j-admin import
+This process uses neo4j-import.  Please note that this has been deprecated and it is recommend to use neo4j-admin import.
