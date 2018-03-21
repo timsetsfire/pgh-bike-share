@@ -20,3 +20,18 @@ Once the process is complete drop bikegraph.db into $NEO4J_HOME/data/database an
 ### Note
 
 This process uses neo4j-import.  Please note that this has been deprecated. 
+
+### Notebook examples
+
+`Spectral Clustering.ipynb` makes use of [gmaps](https://github.com/pbugnion/gmaps), which is a plugin for for including interactive Google maps in the IPython Notebook.
+
+To install gmaps, run the following 
+
+`conda install -c conda-forge gmaps`
+
+`jupyter nbextension enable --py --sys-prefix widgetsnbextension`
+
+`jupyter nbextension enable --py --sys-prefix gmaps`
+
+Also - you will need to create an api key for gmaps. It is easy just follow the [instructions](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend&keyType=CLIENT_SIDE&reusekey=true).
+The notebook assumes that the api key is available via the environment variable `GOOGLE_API_KEY`.  The `gmap` documenation has clearn instructions. 
