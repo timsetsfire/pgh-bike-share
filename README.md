@@ -23,6 +23,9 @@ This process uses neo4j-import.  Please note that this has been deprecated.
 
 ### Notebook examples
 
+* `pgh bike data.ipynb`
+* `Spectral Clustering Attempt.ipynb`
+
 `Spectral Clustering.ipynb` makes use of [gmaps](https://github.com/pbugnion/gmaps), which is a plugin for for including interactive Google maps in the IPython Notebook.
 
 To install gmaps, run the following 
